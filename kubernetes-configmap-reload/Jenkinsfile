@@ -54,14 +54,14 @@ pipeline {
 	            dockerCleanup ( "${params.ImageName}", "${params.docker_repo}" )
 			}
 		}
-			    stage("Ansible Setup") {
-	        when {
-				expression { params.action == 'create' }
-			}
-	        steps {
-	            sh 'ansible-playbook ${WORKSPACE}/kubernetes-configmap-reload/server_setup.yml'
-			}
-		}
+//			    stage("Ansible Setup") {
+//	        when {
+//				expression { params.action == 'create' }
+//			}
+//	        steps {
+//	            sh 'ansible-playbook ${WORKSPACE}/kubernetes-configmap-reload/server_setup.yml'
+//			}
+//		}
 	    stage("Create deployment") {
 			when {
 				expression { params.action == 'create' }
