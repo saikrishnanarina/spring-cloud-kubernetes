@@ -32,7 +32,7 @@ pipeline {
 			}
     		steps {
         		dir("${params.AppName}") {
-        			sh 'mvn clean install'
+        			sh 'mvn clean package'
         		}
     		}
 	    }
