@@ -21,7 +21,7 @@ pipeline {
 			}
             steps {
                 gitCheckout(
-                    branch: "master",
+                    branch: "main",
                     url: "https://github.com/saikrishnanarina/spring-cloud-kubernetes.git"
                 )
             }
